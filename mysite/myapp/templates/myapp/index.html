@@ -1,18 +1,20 @@
 {% load static %}
 <html>
-  <head> 
-    <link rel="stylesheet" href="{% static 'myapp/style.css' %}">
-  </head>
-  <body>
+
+<head>
+    <link rel="stylesheet" href="{% static 'myapp/styles.css' %}" />
+</head>
+
+<body class="bg-sky-500">
     <h1>This is index template</h1>
     <h4>
-      <!-- <a href="/myapp/index/{{item.id}}/"></a> -->
-      {% for item in items %}
-      <a href="{% url 'myapp:detail' item.id %}">
+        <!-- <a href="/myapp/index/{{item.id}}/"></a> -->
+        {% for item in items %}
+        <a href="{% url 'myapp:detail' item.id %}">
         ID: {{item.id}} | Имя: {{item.name}} | Цена: {{item.price}} |
         {{item.description}} <br />
-      </a>
-      {% endfor %}
+      </a> {% endfor %}
     </h4>
-  </body>
+</body>
+
 </html>
