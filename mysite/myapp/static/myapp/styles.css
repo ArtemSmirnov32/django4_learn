@@ -538,7 +538,29 @@ video {
   position: static;
 }
 
-.bg-sky-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(14 165 233 / var(--tw-bg-opacity));
+.flex {
+  display: flex;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.text-xl {
+  font-size: 1.25rem/* 20px */;
+  line-height: 1.75rem/* 28px */;
+}
+
+.h-8 {
+  height: 2rem/* 32px */;
+}
+
+.w-8 {
+  width: 2rem/* 32px */;
 }
