@@ -1,14 +1,18 @@
 {% extends "myapp/base.html"%}
 {% block content %}
 
-<h4>
-  <!-- <a href=" /myapp/index/{{item.id}}/ "></a> -->
-  {% for item in items %}
-  <a href="{% url 'myapp:detail' item.id %} ">
-    ID: {{item.id}} | Имя: {{item.name}} | Цена: {{item.price}} |
-    {{item.description}} <br />
-    <img src="{{item.image.url}}" alt="">
-  </a>
-  {% endfor %}
-</h4>
+
+<div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 xl:grid-col-3 lg:grid-col-3 gap-3">
+  <h4>
+    <!-- <a href=" /myapp/index/{{item.id}}/ "></a> -->
+    {% for item in items %}
+    <a href="{% url 'myapp:detail' item.id %} ">
+      ID: {{item.id}} | Имя: {{item.name}} | Цена: {{item.price}} |
+      {{item.description}} <br />
+      <img src="{{item.image.url}}" alt="">
+    </a>
+    {% endfor %}
+  </h4>
+</div>
+
 {% endblock content %}
